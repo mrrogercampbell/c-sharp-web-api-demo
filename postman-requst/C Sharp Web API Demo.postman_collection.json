@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "42a418ac-9900-4457-90aa-e0c3052478dd",
+		"name": "C Sharp Web API Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "People",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/person/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"person",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "People",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"Bob\",\n\"age\": 101,\n\"hometown\": \"Miami, FL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/person/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"person",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "People",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"James Dean\",\n\"age\": 201,\n\"hometown\": \"Miami, FL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/person/555ed1b4-48dd-4863-91c1-9eeba794bec4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"person",
+						"555ed1b4-48dd-4863-91c1-9eeba794bec4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "People",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/person/e6f84ab2-3790-4592-85c8-44091620409b",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"person",
+						"e6f84ab2-3790-4592-85c8-44091620409b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

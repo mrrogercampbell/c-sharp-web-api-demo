@@ -23,17 +23,16 @@ namespace test_web_api.Controllers
             _logger = logger;
         }
 
+        private string[] posts; 
+
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IActionResult Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            //var post = Post.getAll();
+            var name = "Doc";
+
+            return Content(name);
         }
+
     }
 }
