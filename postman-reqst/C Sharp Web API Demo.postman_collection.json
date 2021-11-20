@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "c184ea36-7844-445c-a21e-39646ab2166c",
+		"name": "C Sharp Web API Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All People",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/person/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"person",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single People",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/person/079999c5-cd94-4f0b-89e7-91669b43adb0",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"person",
+						"079999c5-cd94-4f0b-89e7-91669b43adb0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "People",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jane\",\n    \"age\": 1,\n    \"hometown\": \"Waldorf, Md\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/person/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"person",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "People",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"James Dean\",\n\"age\": 201,\n\"hometown\": \"Miami, FL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/person/14e1fee3-e226-4fbe-bf37-fed62475a08a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"person",
+						"14e1fee3-e226-4fbe-bf37-fed62475a08a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "People",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/person/14e1fee3-e226-4fbe-bf37-fed62475a08a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"person",
+						"14e1fee3-e226-4fbe-bf37-fed62475a08a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
