@@ -26,27 +26,36 @@ namespace test_web_api.Controllers
         };
             
 
-        // GET: api/values
+        // GET: api/person
         [HttpGet]
         public IEnumerable<Person> Get()
         {
             return people;
         }
 
-        // GET api/values/5
+        // GET api/person/5
         [HttpGet("{id}")]
-        public Person Get(string id)
+        public Task<Person> Get(string id)
+        {
+            return GetSinglePerson(id);
+        }
+
+
+        private async Task<Person> GetSinglePerson(string id)
         {
             Person selectedPerson = null;
 
-            foreach(var person in people)
+            foreach (var person in people)
             {
+                await Task.Delay(500);
+
                 if (person.Id == id)
                     selectedPerson = person;
             }
 
             return selectedPerson;
         }
+
 
         // POST api/values
         [HttpPost]
@@ -64,6 +73,7 @@ namespace test_web_api.Controllers
         public Person Put(string id, [FromBody] Person submitedPersonData)
         {
             Person updatedPerson = null;
+
             foreach (var person in people)
             {
                 if (person.Id == id)
