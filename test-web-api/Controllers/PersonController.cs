@@ -57,7 +57,7 @@ namespace test_web_api.Controllers
         }
 
 
-        // POST api/values
+        // POST api/person
         [HttpPost]
         public IEnumerable<Person> Post([FromBody] PersonViewModel newPerson)
         {
@@ -68,7 +68,7 @@ namespace test_web_api.Controllers
             return people;
         }
 
-        // PUT api/values/5
+        // PUT api/person/5
         [HttpPut("{id}")]
         public Person Put(string id, [FromBody] Person submitedPersonData)
         {
@@ -91,7 +91,7 @@ namespace test_web_api.Controllers
             return updatedPerson;
         }
 
-        // DELETE api/values/5
+        // DELETE api/person/5
         [HttpDelete("{id}")]
         public IEnumerable<Person> Delete(string id)
         {
